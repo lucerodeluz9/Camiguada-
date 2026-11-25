@@ -6,18 +6,17 @@
   <title>Cami &amp; Guada — Entre Apuntes ♡ | Tienda Digital de Resúmenes</title>
   <style>
     :root {
-      --bg: #fff6f8;
+      --bg: #fff7fa;
       --surface: #ffffff;
-      --surface-soft: #fdeef2;
-      --text: #2b1d24;
-      --muted: #6e5561;
-      --accent: #e14b7b;
-      --accent-dark: #b8325e;
-      --accent-soft: #ffd6e3;
-      --border: #f3d5df;
-      --ok: #1f7a4c;
-      --shadow: 0 10px 28px rgba(225, 75, 123, 0.12);
-      --radius: 18px;
+      --surface-soft: #fdecf2;
+      --text: #2c1c24;
+      --muted: #6f5461;
+      --accent: #d81b60;
+      --accent-dark: #a81048;
+      --accent-soft: #ffd6e5;
+      --border: #f4d7e2;
+      --shadow: 0 10px 28px rgba(216, 27, 96, 0.1);
+      --radius: 20px;
     }
 
     * {
@@ -35,20 +34,19 @@
     }
 
     .topbar {
-      background: linear-gradient(90deg, #ff7aa2, #e14b7b);
+      background: linear-gradient(90deg, #ff79a8, #d81b60);
       color: #fff;
       text-align: center;
       padding: 9px 14px;
       font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.2px;
+      font-weight: 700;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
@@ -64,6 +62,24 @@
       flex-wrap: wrap;
     }
 
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
     .brand {
       display: flex;
       flex-direction: column;
@@ -72,7 +88,7 @@
     .brand-title {
       font-weight: 800;
       font-size: 1.1rem;
-      color: var(--accent-dark);
+      color: var(--text);
     }
 
     .brand-sub {
@@ -101,7 +117,7 @@
     }
 
     .cart-pill {
-      background: var(--accent);
+      background: linear-gradient(90deg, #e91e63, #8e24aa);
       color: #fff;
       border: none;
       border-radius: 999px;
@@ -112,11 +128,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 4px 14px rgba(225, 75, 123, 0.28);
-    }
-
-    .cart-pill:hover {
-      background: var(--accent-dark);
+      box-shadow: 0 4px 14px rgba(142, 36, 170, 0.25);
     }
 
     .container {
@@ -148,7 +160,7 @@
     }
 
     h1 {
-      font-size: clamp(1.65rem, 4vw, 2.4rem);
+      font-size: clamp(1.65rem, 4vw, 2.35rem);
       line-height: 1.2;
       margin-bottom: 12px;
     }
@@ -175,8 +187,8 @@
     .btn {
       border: none;
       border-radius: 12px;
-      padding: 12px 18px;
-      font-size: 0.92rem;
+      padding: 11px 16px;
+      font-size: 0.9rem;
       font-weight: 700;
       cursor: pointer;
       text-decoration: none;
@@ -210,13 +222,32 @@
       background: var(--accent-soft);
     }
 
+    .btn-add-sm {
+      background: #fff;
+      color: var(--accent);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-add-sm:hover {
+      background: var(--surface-soft);
+      border-color: var(--accent);
+    }
+
     .btn-outline-sm {
-      background: transparent;
-      color: var(--accent-dark);
+      background: #fff;
+      color: var(--text);
       border: 1px solid var(--border);
-      padding: 8px 12px;
+      border-radius: 12px;
+      padding: 8px 13px;
       font-size: 0.82rem;
-      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
     }
 
     .btn-outline-sm:hover {
@@ -259,28 +290,21 @@
       gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 18px;
-      background: #fff;
+      background: var(--surface);
       padding: 12px;
       border-radius: 20px;
       border: 1px solid var(--border);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
     .filter-btn {
       background: var(--surface-soft);
       border: 1px solid var(--border);
       color: var(--text);
-      padding: 8px 16px;
+      padding: 8px 15px;
       border-radius: 999px;
       font-size: 0.85rem;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .filter-btn:hover {
-      background: var(--accent-soft);
-      border-color: var(--accent);
     }
 
     .filter-btn.active {
@@ -291,7 +315,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
       gap: 20px;
       margin-bottom: 36px;
     }
@@ -299,35 +323,76 @@
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius: 22px;
       padding: 20px;
-      box-shadow: 0 6px 18px rgba(43, 29, 36, 0.05);
+      box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 16px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 14px;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(225, 75, 123, 0.08);
-    }
-
-    .card-cover {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: var(--surface-soft);
-      display: block;
-    }
-
-    .card-top {
+    .preview-banner {
+      background: #fff9fb;
+      border: 1.5px solid #f6dce6;
+      border-radius: 18px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       gap: 10px;
+    }
+
+    .preview-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .preview-brand {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .pill-off {
+      background: #e91e63;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .preview-kicker {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .preview-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .mini-chip {
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 999px;
     }
 
     .tag-row {
@@ -337,7 +402,6 @@
     }
 
     .tag {
-      display: inline-block;
       font-size: 0.72rem;
       font-weight: 700;
       color: var(--accent-dark);
@@ -347,8 +411,9 @@
     }
 
     .card h3 {
-      font-size: 1.1rem;
-      line-height: 1.3;
+      font-size: 1.18rem;
+      font-weight: 900;
+      line-height: 1.25;
     }
 
     .card p {
@@ -362,7 +427,6 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 12px 14px;
-      margin-top: 4px;
     }
 
     .syllabus-box.open {
@@ -370,7 +434,7 @@
     }
 
     .syllabus-title {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -388,29 +452,33 @@
       margin-bottom: 4px;
     }
 
-    .card-footer {
-      border-top: 1px solid var(--border);
-      padding-top: 14px;
+    .price-strip {
+      background: #fff7fa;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 14px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
       gap: 10px;
     }
 
-    .price-row {
+    .price-pair {
       display: flex;
       align-items: baseline;
       gap: 8px;
     }
 
     .price-old {
-      font-size: 0.84rem;
-      color: var(--muted);
+      font-size: 0.85rem;
+      color: #9e8591;
       text-decoration: line-through;
+      font-weight: 600;
     }
 
     .price-now {
-      font-size: 1.25rem;
-      font-weight: 800;
+      font-size: 1.15rem;
+      font-weight: 900;
       color: var(--text);
     }
 
@@ -418,89 +486,75 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 26px;
+      padding: 24px;
       margin-bottom: 24px;
       box-shadow: var(--shadow);
     }
 
     .info-box h2 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-size: 1.28rem;
+      margin-bottom: 10px;
     }
 
     .info-box p, .info-box li {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: var(--muted);
-      line-height: 1.6;
     }
 
     .info-box ul {
       padding-left: 20px;
-      margin-top: 12px;
-    }
-
-    .info-box li {
-      margin-bottom: 6px;
+      margin-top: 10px;
     }
 
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
     }
 
     .review-card {
       background: var(--surface-soft);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 20px;
+      border-radius: 18px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
     .review-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 8px;
     }
 
     .reviewer-name {
       font-weight: 700;
-      font-size: 0.98rem;
       color: var(--accent-dark);
     }
 
     .review-rating {
-      color: #e14b7b;
-      font-size: 1rem;
+      color: var(--accent);
       letter-spacing: 2px;
-      white-space: nowrap;
     }
 
     .review-text {
-      font-size: 0.92rem;
       font-style: italic;
+      font-size: 0.9rem;
       color: var(--text);
-      line-height: 1.5;
     }
 
     .review-course {
-      font-size: 0.76rem;
+      font-size: 0.75rem;
+      font-weight: 700;
       color: var(--muted);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 700;
     }
 
     .add-review-box {
-      margin-top: 20px;
-      padding-top: 20px;
+      margin-top: 18px;
+      padding-top: 18px;
       border-top: 1px dashed var(--border);
       text-align: center;
     }
@@ -512,7 +566,6 @@
       display: none;
       justify-content: flex-end;
       z-index: 50;
-      backdrop-filter: blur(4px);
     }
 
     .drawer-backdrop.open {
@@ -529,63 +582,38 @@
       flex-direction: column;
       justify-content: space-between;
       overflow-y: auto;
-      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
     }
 
     .drawer-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 16px;
-      margin-bottom: 18px;
-    }
-
-    .drawer-top h3 {
-      font-size: 1.3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .close-btn {
       background: var(--surface-soft);
       border: none;
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       font-weight: 700;
       cursor: pointer;
       color: var(--text);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-    }
-
-    .close-btn:hover {
-      background: var(--accent-soft);
-      color: var(--accent-dark);
     }
 
     .cart-item {
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 12px;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       background: var(--bg);
-    }
-
-    .cart-item-title {
-      font-weight: 700;
-      font-size: 0.98rem;
-      margin-bottom: 4px;
-    }
-
-    .cart-item-sub {
-      font-size: 0.85rem;
-      color: var(--muted);
     }
 
     .qty-controls {
@@ -595,62 +623,46 @@
     }
 
     .qty-btn {
-      width: 30px;
-      height: 30px;
-      border-radius: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
       border: 1px solid var(--border);
       background: #fff;
       font-weight: 700;
       cursor: pointer;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .qty-btn:hover {
-      background: var(--surface-soft);
-      border-color: var(--accent);
     }
 
     .field {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .field label {
       display: block;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 700;
       margin-bottom: 6px;
     }
 
     .field input {
       width: 100%;
-      padding: 12px 16px;
+      padding: 11px 14px;
       border-radius: 12px;
       border: 1px solid var(--border);
-      font-size: 0.95rem;
-      background: var(--bg);
-    }
-
-    .field input:focus {
-      outline: none;
-      border-color: var(--accent);
-      background: #fff;
+      font-size: 0.92rem;
     }
 
     .total-box {
       border-top: 2px solid var(--border);
-      padding-top: 18px;
-      margin-top: 18px;
+      padding-top: 16px;
+      margin-top: 16px;
     }
 
     .total-line {
       display: flex;
       justify-content: space-between;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 800;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: var(--accent-dark);
     }
 
@@ -664,11 +676,6 @@
       background: #1ea853;
       color: #fff;
       width: 100%;
-      font-size: 1rem;
-    }
-
-    .btn-wa-primary:hover {
-      background: #178842;
     }
 
     .btn-wa-secondary {
@@ -676,30 +683,24 @@
       color: var(--accent-dark);
       border: 1px solid var(--accent);
       width: 100%;
-      font-size: 0.95rem;
-    }
-
-    .btn-wa-secondary:hover {
-      background: var(--accent-soft);
     }
 
     .helper-note {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--muted);
-      margin-top: 10px;
+      margin-top: 8px;
       text-align: center;
     }
 
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(30, 16, 23, 0.6);
+      background: rgba(30, 16, 23, 0.58);
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 18px;
       z-index: 60;
-      backdrop-filter: blur(4px);
     }
 
     .modal-backdrop.open {
@@ -708,19 +709,18 @@
 
     .modal-box {
       background: var(--surface);
-      border-radius: 24px;
-      max-width: 500px;
+      border-radius: 22px;
+      max-width: 480px;
       width: 100%;
-      padding: 28px;
+      padding: 24px;
       border: 1px solid var(--border);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
 
     footer {
       text-align: center;
-      padding: 36px 16px;
+      padding: 32px 16px;
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
   </style>
 </head>
@@ -731,9 +731,12 @@
 
   <header>
     <div class="nav-wrap">
-      <div class="brand">
-        <span class="brand-title">Cami &amp; Guada ♡</span>
-        <span class="brand-sub">ENTRE APUNTES</span>
+      <div class="brand-row">
+        <div class="brand-icon">🎀</div>
+        <div class="brand">
+          <span class="brand-title">Cami &amp; Guada ♡</span>
+          <span class="brand-sub">ENTRE APUNTES ✨</span>
+        </div>
       </div>
       <nav>
         <a href="#materias">Materias</a>
@@ -800,7 +803,7 @@
         Antes de comprar podés revisar cómo organizamos los títulos, definiciones clave, cuadros comparativos y
         ejemplos para que el estudio sea ágil y visual.
       </p>
-      <div style="margin-top: 16px;">
+      <div style="margin-top: 14px;">
         <button type="button" class="btn btn-secondary" id="openSampleBtn2">Abrir vista previa de muestra</button>
       </div>
     </section>
@@ -812,8 +815,8 @@
       <div class="reviews-grid" id="reviewsContainer"></div>
 
       <div class="add-review-box">
-        <p style="margin-bottom: 12px; font-weight: 600; color: var(--accent-dark);">¿Ya estudiaste con nuestros apuntes?</p>
-        <a href="https://wa.me/5491140668440?text=¡Hola%20Guadalupe!%20Quiero%20dejarles%20un%20comentario%20sobre%20los%20apuntes%20de%20Entre%20Apuntes%20♡" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background: var(--accent-soft); border-color: var(--accent);">
+        <p style="margin-bottom: 10px; font-weight: 600; color: var(--accent-dark);">¿Ya estudiaste con nuestros apuntes?</p>
+        <a href="https://wa.me/5491140668440?text=¡Hola%20Guadalupe!%20Quiero%20dejarles%20un%20comentario%20sobre%20los%20apuntes%20de%20Entre%20Apuntes%20♡" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
           💬 Dejanos tu comentario por WhatsApp
         </a>
       </div>
@@ -848,4 +851,5 @@
         </div>
 
         <div class="field">
-          <label for="buyerNote">Ca
+          <label for="buyerNote">Carrera / Cátedra o aclaración (opcional)</label>
+          <input type="text" id="buyerNote" placeholder="Ej.: UBA XXI / Parcial de
